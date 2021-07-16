@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <script src="data/deaths.js"></script>
+    <script src="js/d3.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="top">
+      <div class="title"><img src="img/deathsTitle.svg" /></div>
+
+      <div class="description">
+        <div class="left">
+          <p>What were the greatest causes of death in the 20th century?</p>
+
+          <p>War? Disease? Natural disasters?</p>
+
+          <p>
+            Mortality data was examined from around the world - from disease to
+            murder to mudslides - then calculated and visualized. What killed
+            the most people?
+          </p>
+        </div>
+        <div class="right">
+          <p>
+            Key sources used include the World Health Organization and the OECD
+            as well as other secondary sources.
+          </p>
+          <p>
+            For more information on the data used for this visualization,
+            <a
+              href="https://docs.google.com/spreadsheets/d/1vHTUaPWwlCPCg4O5YvDFRuDOCA8xX2ERnJQImnps6sk/edit#gid=8"
+              target="blank"
+              >visit here</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="middle">
+      <div class="icons">
+        <img src="img/smoker.png" />
+        <img src="img/snake.png" />
+
+        <img src="img/carCrash.png" />
+        <img src="img/cloudBurst.png" />
+        <img src="img/cough.png" />
+      </div>
+    </div>
+    <div class="bottom">
+      <p class="instructions">Click on the circles below</p>
+      <div id="chart" />
+    </div>
+    <div class="footer">
+      <h3>Links</h3>
+      <p><a href="https://d3js.org/" target="blank">D3</a></p>
+      <p>
+        <a href="http://www.informationisbeautiful.net" target="blank"
+          >Information is Beautiful</a
+        >
+      </p>
+    </div>
+  </body>
+</html>
+
+<script src="js/chart.js"></script>
+<script>
+  const promise = new Promise((resolve, reject) => {
+    try {
+      let data = circleChart();
+      resolve(data);
+    } catch (err) {
+      reject("Error" + err);
+    }
+  });
+
+  promise.then((data) => {
+    document.getElementById("chart").appendChild(data);
+  });
+</script>

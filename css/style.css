@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.top {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #40403f;
+  align-items: center;
+  padding: 20px 50px 10px 50px;
+}
+.top .title {
+  width: 100%;
+  max-width: 890px;
+}
+.top .description {
+  display: flex;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: flex-start;
+  color: #fff;
+  max-width: 890px;
+}
+.description .left,
+.title .left {
+  flex: 1 1 50%;
+  margin-right: 25px;
+}
+.description .right,
+.title .right {
+  flex: 1 1 50%;
+  margin-left: 25px;
+}
+.description .right a,
+.description .right a:visited,
+.description .right a:active,
+.description .right a:hover {
+  text-decoration: underline;
+  color: #fff;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.middle {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 50px;
+}
+.middle .icons {
+  display: flex;
+  flex-flow: row nowrap;
+  vertical-align: middle;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  max-width: 890px;
+  box-sizing: border-box;
+}
+.middle img {
+  vertical-align: middle;
+  margin-top: 10px;
+  height: 70%;
+}
+.bottom {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #85aa74;
+  width: 100%;
+}
+.bottom #chart {
+  width: 100%;
+  max-width: 990px;
+}
+.footer {
+  display: block;
+
+  background-color: #40403f;
+  width: 100%;
+
+  padding: 10px 50px 20px 50px;
+  box-sizing: border-box;
+}
+
+.footer a,
+.footer a:visited,
+.footer a:active,
+.footer a:hover {
+  text-decoration: none;
+  color: #fff;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 12px;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer h3 {
+  color: #fff;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.footer p {
+  padding: 0;
+  margin: 5px 0;
+}
+.instructions {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
